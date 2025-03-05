@@ -1,16 +1,16 @@
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
 <section class="bg-cst-one">
     <mat-tab-group dynamicHeight>
         <mat-tab>
             <ng-template mat-tab-label>
                 <p class="text-xl font-medium text-cst-five">Harga Base Oil (USD/Ton)</p>
             </ng-template>
-            <article>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas porro itaque ipsa perspiciatis error
-                beatae
-                asperiores saepe vitae, adipisci alias debitis, eveniet similique nostrum obcaecati qui explicabo
-                repellendus
-                possimus corrupti.
-            </article>
+            <div>
+                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+                    [plotOptions]="chartOptions.plotOptions" [dataLabels]="chartOptions.dataLabels"
+                    [stroke]="chartOptions.stroke"></apx-chart>
+            </div>
         </mat-tab>
         <mat-tab>
             <div class="countryCondition-content mat-elevation-z4">
@@ -46,40 +46,7 @@
                         </div>
                     </div>
                     }
-
-
                 </div>
-                <!-- <article class="p-5">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Negara</th>
-                                <th></th>
-                                <th>Kondisi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @for (item of countryConditions; track item.country) {
-                            <tr>
-                                <td>
-                                    @if (item.countryCode) {
-                                    <img [src]="'https://flagcdn.com/' + item.image.toLowerCase() + '.svg'"
-                                        [alt]="item.country + ' flag'" width="30" />
-                                    } @else {
-                                    <span>No flag available</span>
-                                    }
-                                </td>
-                                <td>{{item.country}}</td>
-                                <ul class="p-5">
-                                    @for (conditionItem of item.condition; track conditionItem) {
-                                    <li>{{conditionItem}}</li>
-                                    }
-                                </ul>
-                            </tr>
-                            }
-                        </tbody>
-                    </table>
-                </article> -->
             </div>
         </mat-tab>
     </mat-tab-group>

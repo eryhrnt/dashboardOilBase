@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { hasFlag } from 'country-flag-icons'
+import { NgApexchartsModule } from 'ng-apexcharts';
+import { ApexChart } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-data-narrations',
   standalone: true,
-  imports: [MatTabsModule],
+  imports: [MatTabsModule, NgApexchartsModule],
   templateUrl: './data-narrations.component.html',
   styleUrl: './data-narrations.component.css'
 })
-export class DataNarrationsComponent {
+
+export class DataNarrationsComponent implements OnInit {
+  //Condition Data
   countryConditions = [
     {
       countryCode: hasFlag('CN') === true,
@@ -57,5 +61,88 @@ export class DataNarrationsComponent {
         'Pemeliharaan Refinery IRPC: Refinery Grup I milik IRPC di Thailand dijadwalkan melakukan pemeliharaan selama 10 hari pada Mei 2025, yang mungkin bertepatan dengan peningkatan permintaan musiman.',
       ]
     },
+    {
+      countryCode: hasFlag('JP') === true,
+      image: 'JP',
+      country: 'Jepang',
+      condition: [
+        'Kondisi Pasokan Grup I: Pasokan Grup I tetap ketat setelah penutupan refinery milik Idemitsu Kosan di Chiba akibat kebakaran pada pertengahan 2024. Pemeliharaan di unit dari Cosmo Oil dan Eneos juga mempengaruhi pasokan. Semua penutupan ini menyusul penutupan permanen dua pabrik Eneos Group I selama tiga tahun terakhir.',
+      ]
+    },
+    {
+      countryCode: hasFlag('SA') === true,
+      image: 'SA',
+      country: 'Arab Saudi',
+      condition: [
+        'Pemeliharaan Refinery Luberef: Luberef akan menutup refinery Grup I dan II di Yanbu untuk pemeliharaan pada kuartal kedua atau ketiga 2025.',
+      ]
+    },
+    {
+      countryCode: hasFlag('BH') === true,
+      image: 'BH',
+      country: 'Bahrain',
+      condition: [
+        'Pemeliharaan Refinery Bapco: Bapco berencana melakukan pemeliharaan selama 45 hari di fasilitas Grup III di Sitra mulai Maret 2025.',
+      ]
+    },
+    {
+      countryCode: hasFlag('SG') === true,
+      image: 'SG',
+      country: 'Singapore',
+      condition: [
+        'ExxonMobil berencana menambah kapasitas produksi Grup II melalui proyek Singapore Resid Upgrade. Perusahaan ini akan memproduksi lebih dari satu juta ton per tahun base stock performa tinggi Grup II, termasuk produk baru EHC340 Max (pengganti bright stock dalam kategori Grup II). Proyek ini juga akan memperkenalkan produk EHC 120 ke pasar Asia Pasifik.',
+      ]
+    },
   ];
+
+  //Chart Database
+  public chartOptions: any;
+
+  ngOnInit(): void {
+    this.initializeChart();
+  }
+
+  initializeChart(): void {
+    this.chartOptions = {
+      series: [
+        {
+          name: 'Ex-Tank Singapore',
+          data: [800, 1060, 1360, 860, 1090, 1040, 1070, 970],
+        },
+        {
+          name: 'FOB Asia',
+          data: [670, 910, 1210, 730, 965],
+        },
+      ],
+      chart: {
+        type: 'bar',
+        height: 450,
+      },
+      plotOptions: {
+        bar: {
+          horizontal: true,
+          dataLabels: {
+            position: 'top'
+          }
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        offsetX: -6,
+        style: {
+          fontSize: '12px',
+          colors: ['#fff']
+        }
+      },
+      stroke: {
+        show: true,
+        width: 1,
+        colors: ['#fff']
+      },
+      xaxis: {
+        categories: ['SN 150', 'SN 500', 'Brightstock', '150N', '500N', '4 cST', '6 cST', '8 cST']
+      },
+    }
+  }
 }
+

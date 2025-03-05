@@ -3,15 +3,15 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
-      colors:{
-        'cst-one' : '#F2D7EE', //Pale Purple
-        'cst-two' : '#D3BCC0', //Thistle
-        'cst-three' : '#A5668B', //Chinese Violet
-        'cst-four' : '#69306D', //Finn
-        'cst-five' : '#0E103D', //Penn Blue
-    }
-  },
+      colors: {
+        'cst-one': '#C6D8FF', //Periwinkle
+        'cst-two': '#71A9F7', //Ruddy Blue
+        'cst-three': '#6B5CA5', //Ultra Violet
+        'cst-four': '#72195A', //Byzantium
+        'cst-five': '#4C1036', //Tyrian Purple
+      },
+    },
   },
   plugins: [],
-  
+
 }

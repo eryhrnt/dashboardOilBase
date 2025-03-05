@@ -116,7 +116,7 @@ export class DataNarrationsComponent implements OnInit {
       ],
       chart: {
         type: 'bar',
-        height: 450,
+        height: 650,
       },
       plotOptions: {
         bar: {

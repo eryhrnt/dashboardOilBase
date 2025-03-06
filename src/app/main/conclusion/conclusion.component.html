@@ -1,10 +1,20 @@
-<section class="py-5">
-    <h1 class="text-2xl font-bold text-cst-one px-10">Kesimpulan</h1>
-    <p class="font-normal text-cst-one px-10">
-        Keseimbangan pasokan dan permintaan base oil di Asia diperkirakan akan semakin ketat dalam beberapa bulan ke depan, dipicu 
-        oleh penutupan refinery permanen, program pemeliharaan, dan ketidakpastian geopolitik. Harga cenderung stabil hingga 
-        menguat, tetapi potensi pengetatan pasokan dapat memengaruhi dinamika harga di masa mendatang. Ekspansi kapasitas oleh 
-        ExxonMobil dan produsen lain mungkin akan membantu meredakan tekanan pasokan dalam jangka panjang.
-    </p>
-</section>
-
+<section class="py-10 px-20">
+    <h1 class="text-4xl font-bold mb-5 text-cst-five">
+      <mat-icon class="mr-5 text-cst-two" style="scale: 2;">question_answer</mat-icon>
+      KESIMPULAN
+    </h1>
+    <!-- Iteration over the conclusionItem array -->
+    @for (item of conclusionItem; track conclusionItem) {
+      @for (conclusionItem of item.conclusion; track conclusionItem) {
+        <div class="flex items-center">
+          <div class="flex items-center justify-center mr-5">
+            <mat-icon class="text-cst-seven" style="scale: 1;">check_circle</mat-icon>
+          </div>
+          <p class="flex text-justify text-xl font-normal text-cst-five">
+            {{ conclusionItem }}
+          </p>
+        </div>
+      }
+    }
+  </section>
+  

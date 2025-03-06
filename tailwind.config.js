@@ -9,6 +9,17 @@ module.exports = {
         'cst-three': '#6B5CA5', //Ultra Violet
         'cst-four': '#72195A', //Byzantium
         'cst-five': '#4C1036', //Tyrian Purple
+        'cst-six': '#FFEDC6', //Thin Sand
+        'cst-seven': '#F7BF71', //Yellow Sand
+      },
+      animation: {
+        scroll: 'scroll 89s linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-400%)' },
+        },
       },
     },
   },

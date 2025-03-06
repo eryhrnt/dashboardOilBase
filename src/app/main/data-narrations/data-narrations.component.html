@@ -1,53 +1,61 @@
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-<section class="bg-cst-one ">
-    <mat-tab-group dynamicHeight>
-        <mat-tab>
-            <ng-template mat-tab-label>
-                <p class="text-xl font-medium text-cst-five" style="font-family: Poppins">Harga Base Oil (USD/Ton)</p>
-            </ng-template>
-            <div>
-                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
-                    [plotOptions]="chartOptions.plotOptions" [dataLabels]="chartOptions.dataLabels"
-                    [stroke]="chartOptions.stroke"></apx-chart>
-            </div>
-        </mat-tab>
-        <mat-tab>
-            <div class="countryCondition-content mat-elevation-z4">
+<section class="bg-cst-one px-40 py-16">
+    <div class="bg-white rounded-lg overflow-hidden shadow-xl">
+        <mat-tab-group dynamicHeight>
+            <mat-tab>
                 <ng-template mat-tab-label>
-                    <p class="text-xl font-medium text-cst-five" style="font-family: Poppins">Kondisi per Negara</p>
+                    <mat-icon class="mr-2" style="scale: 1.5; color: #4c1036;">attach_money</mat-icon>
+                    <p class="text-2xl font-bold text-cst-five" style="font-family: Poppins">HARGA BASE OIL (USD/TON)
+                    </p>
                 </ng-template>
-                <div class="grid grid-cols-5 gap-4 pt-5">
-                    <div class="col-span-2">
-                        <h1 class="text-center text-2xl">Negara</h1>
-                    </div>
-                    <div class="col-span-3">
-                        <h1 class="text-center text-2xl">Kondisi</h1>
-                    </div>
-                    @for (item of countryConditions; track item.country) {
-                    <div class="col-span-5">
-                        <div class="grid grid-cols-5 gap-4 items-center">
-                            <div class="flex justify-center">
-                                @if (item.countryCode) {
-                                <img class="w-[120px] h-[80px] object-contain"
-                                    [src]="'https://flagcdn.com/' + item.image.toLowerCase() + '.svg'"
-                                    [alt]="item.country + ' flag'" />
-                                } @else {
-                                <span>No flag available</span>
-                                }
-                            </div>
-
-                            <h1 class="text-2xl">{{item.country}}</h1>
-                            <ul class="p-5 col-span-3">
-                                @for (conditionItem of item.condition; track conditionItem) {
-                                <li>{{conditionItem}}</li>
-                                }
-                            </ul>
-                        </div>
-                    </div>
-                    }
+                <div>
+                    <apx-chart [colors]="chartOptions.colors" [series]="chartOptions.series"
+                        [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+                        [plotOptions]="chartOptions.plotOptions" [dataLabels]="chartOptions.dataLabels"
+                        [grid]="chartOptions.grid"></apx-chart>
                 </div>
-            </div>
-        </mat-tab>
-    </mat-tab-group>
+            </mat-tab>
+            <mat-tab>
+                <div class="countryCondition-content mat-elevation-z4">
+                    <ng-template mat-tab-label>
+                        <mat-icon class="mr-2" style="scale: 1.5; color: #4c1036;">place</mat-icon>
+                        <p class="text-2xl font-bold text-cst-five" style="font-family: Poppins">KONDISI PER NEGARA</p>
+                    </ng-template>
+                    <div class="grid grid-cols-12 gap-5 p-5">
+                        <div class="col-span-4">
+                            <h1 class="text-center font-semibold text-cst-five text-2xl">NEGARA</h1>
+                        </div>
+                        <div class="col-span-8">
+                            <h1 class="text-center font-semibold text-cst-five text-2xl">KONDISI</h1>
+                        </div>
+                        @for (item of countryConditions; track item.country) {
+                        <div class="col-span-12">
+                            <div class="grid grid-cols-12 gap-2 bg-cst-four rounded-lg items-center">
+                                <div class="flex justify-center col-span-2">
+                                    @if (item.countryCode) {
+                                    <img class="w-[120px] h-[80px] object-contain"
+                                        [src]="'https://flagcdn.com/' + item.image.toLowerCase() + '.svg'"
+                                        [alt]="item.country + ' flag'" />
+                                    } @else {
+                                    <span>No flag available</span>
+                                    }
+                                </div>
+                                <h1 class="text-3xl text-white font-semibold col-span-2">{{item.country}}</h1>
+                                <ul class="p-5 col-span-8 bg-cst-six rounded-r-lg">
+                                    @for (conditionItem of item.condition; track conditionItem) {
+                                    <li>
+                                        <p class="text-justify font-normal text-cst-five px-5 py-2">{{conditionItem}}
+                                        </p>
+                                    </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        }
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
 </section>

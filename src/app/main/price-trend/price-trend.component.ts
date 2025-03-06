@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-price-trend',
   standalone: true,
-  imports: [],
+  imports: [MatIcon],
   templateUrl: './price-trend.component.html',
   styleUrl: './price-trend.component.css'
 })
 export class PriceTrendComponent {
-
+  description = 'HARGA MINYAK MENTAH TERUS MENGALAMI PENURUNAN AKIBAT JANJI PRESIDEN AS UNTUK MENINGKATKAN PRODUKSI MINYAK DOMESTIK DAN MENINGKATNYA HARAPAN AKAN BERAKHIRNYA PERANG RUSIA-UKRAINA. KESEPAKATAN DAMAI DAPAT MENGAKHIRI SANKSI BARAT TERHADAP RUSIA, YANG MEMUNGKINKAN LEBIH BANYAK MINYAK RUSIA MASUK KE PASAR GLOBAL. SELAIN ITU, KEBIJAKAN TARIF AS TERHADAP BERBAGAI NEGARA, TERMASUK CHINA DAN UNI EROPA, JUGA DAPAT MENAMBAH TEKANAN PADA HARGA MINYAK MENTAH.'
 }

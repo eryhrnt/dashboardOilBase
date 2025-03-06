@@ -1,9 +1,18 @@
-<section class="py-5">
-    <h1 class="text-2xl font-bold text-cst-one px-10">TREN HARGA</h1>
-    <p class="font-normal text-cst-one px-10">
-        Harga minyak mentah terus mengalami penurunan akibat janji Presiden AS untuk meningkatkan produksi minyak domestik dan 
-        meningkatnya harapan akan berakhirnya perang Rusia-Ukraina. Kesepakatan damai dapat mengakhiri sanksi Barat terhadap 
-        Rusia, yang memungkinkan lebih banyak minyak Rusia masuk ke pasar global. Selain itu, kebijakan tarif AS terhadap 
-        berbagai negara, termasuk China dan Uni Eropa, juga dapat menambah tekanan pada harga minyak mentah.
-    </p>
+<section>
+    <div class="flex py-2 gap-7">
+        <div class="flex justify-end items-center ml-10">
+            <mat-icon style="scale: 2; color: #F7BF71;">monetization_on</mat-icon>
+        </div>
+        <h1 class="text-4xl font-bold text-cst-five flex col-span-11">TREN HARGA</h1>
+    </div>
+    <div class="relative overflow-hidden w-full bg-cst-five">
+        <div class="flex animate-scroll whitespace-nowrap">
+            <p class="font-light text-2xl text-white py-5 px-10 flex">
+                {{ description }}
+            </p>
+            <p class="font-light text-2xl text-white py-5 px-10 flex">
+                {{ description }}
+            </p>
+        </div>
+    </div>
 </section>

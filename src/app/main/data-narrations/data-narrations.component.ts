@@ -1,13 +1,15 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { hasFlag } from 'country-flag-icons'
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { MatIcon } from '@angular/material/icon';
 import { ApexChart } from 'ng-apexcharts';
 
 @Component({
   selector: 'app-data-narrations',
   standalone: true,
-  imports: [MatTabsModule, NgApexchartsModule],
+  imports: [MatTabsModule, NgApexchartsModule, MatIcon],
   templateUrl: './data-narrations.component.html',
   styleUrl: './data-narrations.component.css'
 })
@@ -18,7 +20,7 @@ export class DataNarrationsComponent implements OnInit {
     {
       countryCode: hasFlag('CN') === true,
       image: 'CN',
-      country: 'China',
+      country: 'Cina',
       condition: [
         'Masalah Keuangan Internal: Isu keuangan serius di sektor properti dan konstruksi, serta sengketa perdagangan dengan AS, berdampak signifikan pada prospek pertumbuhan ekonomi dan hubungan perdagangan.',
         'Tarif Impor: Presiden AS memberlakukan tarif 10% pada semua impor dari China mulai 1 Februari 2025, dan China membalas dengan tarif pada barang-barang AS, termasuk batu bara, LNG, minyak mentah, dan alat pertanian.',
@@ -104,6 +106,7 @@ export class DataNarrationsComponent implements OnInit {
 
   initializeChart(): void {
     this.chartOptions = {
+      colors: ['#72195A', '#F7BF71'],
       series: [
         {
           name: 'Ex-Tank Singapore',
@@ -116,31 +119,40 @@ export class DataNarrationsComponent implements OnInit {
       ],
       chart: {
         type: 'bar',
-        height: 650,
+        height: 500,
+        fontFamily: 'Poppins',
       },
       plotOptions: {
         bar: {
           horizontal: true,
           dataLabels: {
             position: 'top'
-          }
+          },
+          borderRadius: 2.5,
+          borderRadiusApplication: 'right',
+          barHeight: '75%'
         }
       },
       dataLabels: {
         enabled: true,
-        offsetX: -6,
+        offsetX: -20,
+        offsetY: -2,
         style: {
-          fontSize: '12px',
-          colors: ['#fff']
+          fontSize: '16px',
+          fontFamily: 'Poppins',
+          colors: ['#FFF', '#4C1036']
         }
       },
-      stroke: {
-        show: true,
-        width: 1,
-        colors: ['#fff']
-      },
       xaxis: {
-        categories: ['SN 150', 'SN 500', 'Brightstock', '150N', '500N', '4 cST', '6 cST', '8 cST']
+        categories: ['SN 150', 'SN 500', 'Brightstock', '150N', '500N', '4 cST', '6 cST', '8 cST'],
+      },
+      grid: {
+        row: {
+          colors: ['#C6D8FF', '#FFF',]
+        },
+        column: {
+          colors: ['#FFF', '#C6D8FF',]
+        }
       },
     }
   }

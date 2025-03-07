@@ -10,7 +10,7 @@
 @include mat.core();
 
 // Define the theme object.
-$dashboardW4Feb25-theme: mat.define-theme((
+$dashboardOilBase-theme: mat.define-theme((
   color: (
     theme-type: light,
     primary: mat.$azure-palette,
@@ -25,7 +25,7 @@ $dashboardW4Feb25-theme: mat.define-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 :root {
-  @include mat.all-component-themes($dashboardW4Feb25-theme);
+  @include mat.all-component-themes($dashboardOilBase-theme);
 }
 
 // Comment out the line below if you want to use the pre-defined typography utility classes.

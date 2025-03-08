@@ -13,12 +13,12 @@ module.exports = {
         'cst-seven': '#F7BF71', //Yellow Sand
       },
       animation: {
-        scroll: 'scroll 90s linear infinite',
+        scroll: 'scroll 60s linear infinite',
       },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-750%)' },
+          '100%': { transform: 'translateX(-545%)' },
         },
       },
     },

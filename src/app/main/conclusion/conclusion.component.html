@@ -1,6 +1,6 @@
-<section class="py-10 px-20">
-    <h1 class="text-4xl font-bold mb-5 text-cst-five">
-      <mat-icon class="mr-5 text-cst-two" style="scale: 2;">question_answer</mat-icon>
+<section class="py-2 px-6 bg-white">
+    <h1 class="text-xl font-bold text-black">
+      <mat-icon class="mr-2 text-cst-three" style="scale: 1.2;">question_answer</mat-icon>
       KESIMPULAN
     </h1>
     <!-- Iteration over the conclusionItem array -->
@@ -8,9 +8,9 @@
       @for (conclusionItem of item.conclusion; track conclusionItem) {
         <div class="flex items-center">
           <div class="flex items-center justify-center mr-5">
-            <mat-icon class="text-cst-seven" style="scale: 1;">check_circle</mat-icon>
+            <mat-icon class="text-cst-two" style="scale: 1;">check_circle</mat-icon>
           </div>
-          <p class="flex text-justify text-xl font-normal text-cst-five">
+          <p class="flex text-justify text-sm font-normal text-black">
             {{ conclusionItem }}
           </p>
         </div>

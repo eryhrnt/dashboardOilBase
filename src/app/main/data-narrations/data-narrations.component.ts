@@ -22,10 +22,10 @@ export class DataNarrationsComponent implements OnInit {
       image: 'CN',
       country: 'Cina',
       condition: [
-        'Masalah Keuangan Internal: Isu keuangan serius di sektor properti dan konstruksi, serta sengketa perdagangan dengan AS, berdampak signifikan pada prospek pertumbuhan ekonomi dan hubungan perdagangan.',
-        'Tarif Impor: Presiden AS memberlakukan tarif 10% pada semua impor dari China mulai 1 Februari 2025, dan China membalas dengan tarif pada barang-barang AS, termasuk batu bara, LNG, minyak mentah, dan alat pertanian.',
-        'Ketersediaan Grup I: Kekhawatiran akan ketersediaan base oil Grup I, terutama bright stock, yang sulit digantikan dan pasokannya semakin menipis akibat penutupan refinery dan program pemeliharaan.',
-        'Pemeliharaan Refinery Sinopec: Sinopec berencana melakukan pemeliharaan selama dua bulan di Refinery Gaoqiao (Grup I dan II) mulai Maret 2025, yang dapat memengaruhi pasokan domestik.'
+        'Masalah keuangan di sektor properti dan konstruksi serta sengketa perdagangan dengan AS menghambat pertumbuhan ekonomi.',
+        'TAS memberlakukan tarif 10% pada impor China mulai 1 Februari 2025, dan China membalas dengan tarif pada barang AS.',
+        'Kekhawatiran ketersediaan base oil Grup I, terutama bright stock, semakin menipis akibat penutupan refinery dan pemeliharaan.',
+        'Pemeliharaan refinery Sinopec di Gaoqiao mulai Maret 2025 dapat memengaruhi pasokan domestik.'
       ]
     },
     {
@@ -33,8 +33,8 @@ export class DataNarrationsComponent implements OnInit {
       image: 'ID',
       country: 'Indonesia',
       condition: [
-        'Pemeliharaan Refinery Pertamina: Refinery Grup I milik Pertamina di Cilacap masih menjalani pemeliharaan dari pertengahan Januari hingga akhir Februari 2025, yang kemudian mengurangi volume ekspor yang berasal dari Indonesia.',
-        'Ketatnya Pasokan: Pemeliharaan ini kemudian semakin memperketat pasokan base oil Grup I di kawasan Asia Tenggara.',
+        'Pemeliharaan refinery Grup I Pertamina di Cilacap mengurangi volume ekspor.',
+        'Pemeliharaan ini memperketat pasokan base oil Grup I di Asia Tenggara.',
       ]
     },
     {
@@ -42,8 +42,8 @@ export class DataNarrationsComponent implements OnInit {
       image: 'KR',
       country: 'Korea Selatan',
       condition: [
-        'Pemeliharaan Refinery GS Caltex: GS Caltex memulai pemeliharaan refinery Grup II/III di Yeosu pada akhir Februari, yang diperkirakan akan mengurangi pasokan Grup II dari Korea Selatan.',
-        'Permintaan Grup III: Permintaan Grup III meningkat setelah liburan Tahun Baru Imlek, dengan pembeli kembali ke pasar untuk kembali mengisi stok.'
+        'Pemeliharaan refinery GS Caltex di Yeosu mengurangi pasokan Grup II.',
+        'Permintaan Grup III meningkat pasca-Tahun Baru Imlek.'
       ]
     },
     {
@@ -51,8 +51,8 @@ export class DataNarrationsComponent implements OnInit {
       image: 'IN',
       country: 'India',
       condition: [
-        'Kenaikan Harga Impor: Harga impor base oil di India meningkat karena pasokan yang ketat dan peningkatan permintaan. Impor Grup I SN150 naik $5/ton, sementara bright stock naik $10-15/ton.',
-        'Pemeliharaan Refinery Domestik: Pemeliharaan di dua refinery domestik dalam beberapa minggu ke depan diperkirakan akan mengurangi ketersediaan base oil Grup I dan II.'
+        'Harga impor base oil naik karena pasokan ketat dan permintaan meningkat.',
+        'Pemeliharaan refinery domestik diperkirakan mengurangi ketersediaan base oil Grup I dan II.'
       ]
     },
     {
@@ -60,7 +60,7 @@ export class DataNarrationsComponent implements OnInit {
       image: 'TH',
       country: 'Thailand',
       condition: [
-        'Pemeliharaan Refinery IRPC: Refinery Grup I milik IRPC di Thailand dijadwalkan melakukan pemeliharaan selama 10 hari pada Mei 2025, yang mungkin bertepatan dengan peningkatan permintaan musiman.',
+        'Pemeliharaan refinery IRPC di Thailand pada Mei 2025 dapat bertepatan dengan peningkatan permintaan musiman.',
       ]
     },
     {
@@ -68,7 +68,7 @@ export class DataNarrationsComponent implements OnInit {
       image: 'JP',
       country: 'Jepang',
       condition: [
-        'Kondisi Pasokan Grup I: Pasokan Grup I tetap ketat setelah penutupan refinery milik Idemitsu Kosan di Chiba akibat kebakaran pada pertengahan 2024. Pemeliharaan di unit dari Cosmo Oil dan Eneos juga mempengaruhi pasokan. Semua penutupan ini menyusul penutupan permanen dua pabrik Eneos Group I selama tiga tahun terakhir.',
+        'Pasokan Grup I tetap ketat setelah penutupan refinery Idemitsu Kosan dan pemeliharaan di unit Cosmo Oil dan Eneos.',
       ]
     },
     {
@@ -76,7 +76,7 @@ export class DataNarrationsComponent implements OnInit {
       image: 'SA',
       country: 'Arab Saudi',
       condition: [
-        'Pemeliharaan Refinery Luberef: Luberef akan menutup refinery Grup I dan II di Yanbu untuk pemeliharaan pada kuartal kedua atau ketiga 2025.',
+        'Pemeliharaan refinery Luberef di Yanbu dijadwalkan pada kuartal kedua atau ketiga 2025.',
       ]
     },
     {
@@ -84,7 +84,7 @@ export class DataNarrationsComponent implements OnInit {
       image: 'BH',
       country: 'Bahrain',
       condition: [
-        'Pemeliharaan Refinery Bapco: Bapco berencana melakukan pemeliharaan selama 45 hari di fasilitas Grup III di Sitra mulai Maret 2025.',
+        'Pemeliharaan refinery Bapco di Sitra selama 45 hari mulai Maret 2025.',
       ]
     },
     {
@@ -92,7 +92,7 @@ export class DataNarrationsComponent implements OnInit {
       image: 'SG',
       country: 'Singapore',
       condition: [
-        'ExxonMobil berencana menambah kapasitas produksi Grup II melalui proyek Singapore Resid Upgrade. Perusahaan ini akan memproduksi lebih dari satu juta ton per tahun base stock performa tinggi Grup II, termasuk produk baru EHC340 Max (pengganti bright stock dalam kategori Grup II). Proyek ini juga akan memperkenalkan produk EHC 120 ke pasar Asia Pasifik.',
+        'ExxonMobil akan meningkatkan kapasitas produksi Grup II melalui proyek Singapore Resid Upgrade, termasuk produk baru EHC340 Max dan EHC 120.',
       ]
     },
   ];
@@ -106,7 +106,7 @@ export class DataNarrationsComponent implements OnInit {
 
   initializeChart(): void {
     this.chartOptions = {
-      colors: ['#72195A', '#F7BF71'],
+      colors: ['#2E0CCA', '#A8CA0C'],
       series: [
         {
           name: 'Ex-Tank Singapore',
@@ -119,7 +119,7 @@ export class DataNarrationsComponent implements OnInit {
       ],
       chart: {
         type: 'bar',
-        height: 500,
+        height: 388,
         fontFamily: 'Poppins',
       },
       plotOptions: {
@@ -136,11 +136,11 @@ export class DataNarrationsComponent implements OnInit {
       dataLabels: {
         enabled: true,
         offsetX: -20,
-        offsetY: -2,
+        offsetY: -1,
         style: {
-          fontSize: '16px',
+          fontSize: '12px',
           fontFamily: 'Poppins',
-          colors: ['#FFF', '#4C1036']
+          colors: ['#FFF', '#000']
         }
       },
       xaxis: {

@@ -1,6 +1,11 @@
 <main>
-    <app-market-demand></app-market-demand>
-    <app-price-trend></app-price-trend>
-    <app-data-narrations></app-data-narrations>
-    <app-conclusion></app-conclusion>
+    <div class="grid grid-cols-12 bg-gray-200">
+        <app-market-demand class="col-span-6 row-span-1"></app-market-demand>
+        <app-data-narrations class="col-span-6 row-span-3"></app-data-narrations>
+        <!-- Left column: 3 items, each occupying one row -->
+        
+        <app-price-trend class=" px-2 col-span-6 row-span-1"></app-price-trend>
+        
+    </div>
+    <app-conclusion class=""></app-conclusion>
 </main>

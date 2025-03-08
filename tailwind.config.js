@@ -4,21 +4,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'cst-one': '#C6D8FF', //Periwinkle
-        'cst-two': '#71A9F7', //Ruddy Blue
-        'cst-three': '#6B5CA5', //Ultra Violet
-        'cst-four': '#72195A', //Byzantium
-        'cst-five': '#4C1036', //Tyrian Purple
-        'cst-six': '#FFEDC6', //Thin Sand
+        'cst-one': '#ED1A2E', //Red
+        'cst-two': '#A8CA0C', //Green
+        'cst-three': '#006FBA', //Blue
+        'cst-four': '#1AEDD9', //Cyan
+        'cst-five': '#2E0CCA', //Dark Blue
+        'cst-six': '#BA4B00', //Brown
         'cst-seven': '#F7BF71', //Yellow Sand
       },
       animation: {
-        scroll: 'scroll 89s linear infinite',
+        scroll: 'scroll 90s linear infinite',
       },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-400%)' },
+          '100%': { transform: 'translateX(-750%)' },
         },
       },
     },
